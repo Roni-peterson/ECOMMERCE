@@ -9,6 +9,8 @@ urlpatterns = [
     path('', views.home, name='produtos'),
     #pagina cadastro de produtos
     path('cadastro-produtos/', views.cadastro_produtos, name='produtos'),
+
+    path('enderecar/', views.enderecamento_produtos, name='enderecamento_produtos'),
 ]
 
 # Configuração para servir arquivos de mídia durante o desenvolvimento
