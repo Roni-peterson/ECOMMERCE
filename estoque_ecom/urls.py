@@ -4,12 +4,9 @@ from django.urls import path
 from app_estoque_ecom import views
 
 urlpatterns = [
-    #rota, view, nome referencia
-    #pagina inicial
     path('', views.home, name='produtos'),
-    #pagina cadastro de produtos
-    path('cadastro-produtos/', views.cadastro_produtos, name='produtos'),
-
+    path('cadastro-produtos/', views.cadastro_produtos, name='cadastro_produtos'),
+    path('cadastro-produtos/<int:produto_id>/', views.cadastro_produtos, name='cadastro_produtos'),
     path('enderecar/', views.enderecamento_produtos, name='enderecamento_produtos'),
 ]
 

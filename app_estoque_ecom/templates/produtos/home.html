@@ -30,17 +30,19 @@
                         <th scope="col">Linha</th>
                         <th scope="col">Data Validade</th>
                         <th scope="col">Lote</th>
+                        <th scope="col">Custo</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for produto in produtos %}
+                    {% for cadastro_produtos in produto %}
                     <tr>
-                        <td>{{ produto.cod_produto }}</td>
-                        <td>{{ produto.ean_produto }}</td>
-                        <td>{{ produto.desc_produto }}</td>
-                        <td>{{ produtos.linha_produto }}</td> <!-- Corrigido para produtos.linha_produto -->
-                        <td>{{ produto.dt_val_produto }}</td>
-                        <td>{{ produto.lt_produto }}</td>
+                        <td>{{ cadastro_produtos.cod_produto }}</td>
+                        <td>{{ cadastro_produtos.ean_produto }}</td>
+                        <td>{{ cadastro_produtos.desc_produto }}</td>
+                        <td>{{ cadastro_produtos.linha_produto }}</td> <!-- Corrigido para produtos.linha_produto -->
+                        <td>{{ cadastro_produtos.dt_val_produto }}</td>
+                        <td>{{ cadastro_produtos.lt_produto }}</td>
+                        <td>{{ cadastro_produtos.custo_produto }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>

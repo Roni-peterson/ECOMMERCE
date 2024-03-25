@@ -2,12 +2,23 @@
 <div class="container mt-5">
   <div class="row justify-content-start">
     <div class="col-lg-3"> <!-- Define a largura máxima do formulário -->
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Insira o código" aria-label="Search">
+      <form class="d-flex" onsubmit="enviarPesquisa(event)">
+        <input id="codigo" class="form-control me-2" type="search" placeholder="Insira o código" aria-label="Search">
         <button class="btn btn-outline-primary" type="submit" name="btn-procurar">Procurar</button>
       </form>
     </div>
   </div>
 </div>
 
+<script>
+  function enviarPesquisa(event) {
+    // Impede o envio padrão do formulário
+    event.preventDefault();
 
+    // Obtém o valor do campo de entrada
+    var codigo = document.getElementById("codigo").value;
+
+    // Redireciona para a rota desejada com o código como parâmetro de consulta
+    window.location.href = "{% url 'cadastro_produtos' %}" + encodeURIComponent(codigo);
+  }
+</script>

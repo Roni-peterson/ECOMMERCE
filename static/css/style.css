@@ -58,4 +58,27 @@
     background-color: #EC691F; /* Define a cor de fundo como #EC691F */
     border-color: #EC691F; /* Define a cor da borda como #EC691F */
 }
+/* Estilo para as linhas da tabela */
+.table {
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espaçamento vertical entre as linhas */
+  }
+  
+  /* Estilo para as linhas ímpares da tabela */
+  .table tbody tr:nth-child(odd) {
+    background-color: #f0f0f0; /* Cor de fundo para as linhas ímpares */
+  }
+  
+  /* Estilo para as linhas pares da tabela */
+  .table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Cor de fundo para as linhas pares */
+  }
+  
+  /* Estilo para as células da tabela */
+  .table td, .table th {
+    border: 1px solid #dddddd; /* Borda das células */
+    padding: 8px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto */
+  }
+  
 
