@@ -1,36 +1,38 @@
-<!-- navbar.html -->
-<nav style="background-color:#003DA8 !important;"class="navbar navbar-expand-lg navbar-light bg-light" >
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="{{ MEDIA_URL }}logo.png" alt="logo" style="height: 30px; width: auto;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="./static/imagens/logo.jpg alt="Logo">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="color: white !important;"></span>
-    </button>      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a style="color:white !important;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Estoque Produtos
-            </a>
-            <ul style="background-color:#009FE3 !important;" class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a style="color:white !important;" class="dropdown-item" href="cadastro-produtos/" onmouseover="this.style.backgroundColor='#003DA8';" onmouseout="this.style.backgroundColor='#009FE3';">Cadastrar Produtos</a></li>
-              <li><a style="color:white !important;" class="dropdown-item" href="enderecar/" onmouseover="this.style.backgroundColor='#003DA8';" onmouseout="this.style.backgroundColor='#009FE3';">Endereçar Produtos</a></li>
-              <li><a style="color:white !important;" class="dropdown-item" href="#" onmouseover="this.style.backgroundColor='#003DA8';" onmouseout="this.style.backgroundColor='#009FE3';">Analítico</a></li>
-          </ul>         
-          </li>
-          <li class="nav-item dropdown">
-            <a style="color:white !important;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Almoxarifado
-            </a>
-            <ul style="background-color:#009FE3 !important;" class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a style="color:white !important;" class="dropdown-item" href="#" onmouseover="this.style.backgroundColor='#003DA8';" onmouseout="this.style.backgroundColor='#009FE3';">Entrada</a></li>
-              <li><a style="color:white !important;" class="dropdown-item" href="#" onmouseover="this.style.backgroundColor='#003DA8';" onmouseout="this.style.backgroundColor='#009FE3';">Baixa</a></li>
-              <li><a style="color:white !important;" class="dropdown-item" href="#" onmouseover="this.style.backgroundColor='#003DA8';" onmouseout="this.style.backgroundColor='#009FE3';">Consumo</a></li>
-              <li><a style="color:white !important;" class="dropdown-item" href="#" onmouseover="this.style.backgroundColor='#003DA8';" onmouseout="this.style.backgroundColor='#009FE3';">Inventario</a></li>
-          </ul>         
-          </li>
-        </ul>
-      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Estoque Produtos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="cadastro-produtos/">Cadastro Produtos</a></li>
+            <li><a class="dropdown-item" href="enderecar/">Endereçar Produtos</a></li>
+            <li><a class="dropdown-item" href="analitico-produtos/">Analítico Produtos</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Almoxarifado
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Registrar Almoxarifado</a></li>
+            <li><a class="dropdown-item" href="#">Inventariar Almoxarifado</a></li>
+            <li><a class="dropdown-item" href="#">Analítico Almoxarifado</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

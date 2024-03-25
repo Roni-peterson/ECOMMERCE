@@ -1,0 +1,26 @@
+/* Defina a cor de fundo do navbar */
+.navbar {
+    background-color: #003DA8;
+}
+
+/* Defina a cor do texto dentro do navbar */
+.navbar a.navbar-brand,
+.navbar .navbar-nav .nav-link {
+    color: #fff; /* branco */
+}
+
+/* Defina a cor de fundo do dropdown do navbar */
+.navbar .dropdown-menu {
+    background-color: #003DA8;
+}
+
+/* Defina a cor do texto dentro do dropdown do navbar */
+.navbar .dropdown-menu a.dropdown-item {
+    color: #fff; /* branco */
+}
+
+/* Defina a cor do texto do item do dropdown do navbar quando estiver hover */
+.navbar .dropdown-menu a.dropdown-item:hover {
+    background-color: #EC691F; /* laranja */
+    color: #fff; /* branco */
+}
