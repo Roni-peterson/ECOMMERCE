@@ -1,12 +1,17 @@
-/* Defina a cor de fundo do navbar */
-.navbar {
+/* Defina a cor do texto dentro do navbar */
+.navbar{
     background-color: #003DA8;
 }
-
-/* Defina a cor do texto dentro do navbar */
-.navbar a.navbar-brand,
-.navbar .navbar-nav .nav-link {
-    color: #fff; /* branco */
+/* Defina o tamanho da imagem*/
+.small-logo {
+    width: 150px;
+    height: auto;
+}
+.navbar .nav-link.dropdown-toggle {
+    color: #fff; /* Branco */
+}
+.navbar .nav-link.dropdown-toggle:hover {
+    color: #fff; /* Branco */
 }
 
 /* Defina a cor de fundo do dropdown do navbar */
@@ -24,3 +29,33 @@
     background-color: #EC691F; /* laranja */
     color: #fff; /* branco */
 }
+
+/* Estilizando o botão */
+.btn-outline-primary {
+    color: #ffffff; /* Define a cor do texto como branco */
+    background-color: #003DA8; /* Define a cor de fundo como #003DA8 */
+    border-color: #003DA8; /* Define a cor da borda como #003DA8 */
+}
+
+/* Estilizando o botão quando o mouse estiver em cima */
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    color: #ffffff; /* Define a cor do texto como branco */
+    background-color: #EC691F; /* Define a cor de fundo como #EC691F */
+    border-color: #EC691F; /* Define a cor da borda como #EC691F */
+}
+/* Estilizando o botão */
+.btn-primary {
+    color: #ffffff; /* Define a cor do texto como branco */
+    background-color: #003DA8; /* Define a cor de fundo como #003DA8 */
+    border-color: #003DA8; /* Define a cor da borda como #003DA8 */
+}
+
+/* Estilizando o botão quando o mouse estiver em cima */
+.btn-primary:hover,
+.btn-primary:focus {
+    color: #ffffff; /* Define a cor do texto como branco */
+    background-color: #EC691F; /* Define a cor de fundo como #EC691F */
+    border-color: #EC691F; /* Define a cor da borda como #EC691F */
+}
+
