@@ -117,5 +117,10 @@ thead {
     text-align: left;
     /* Alinhamento do texto */
 }
+body {
 
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+}
