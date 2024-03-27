@@ -117,5 +117,10 @@ thead {
     text-align: left;
     /* Alinhamento do texto */
 }
+body {
 
+    background-image: url("../imagens/fundo6.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
+}
