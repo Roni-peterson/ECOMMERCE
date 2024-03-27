@@ -1,7 +1,7 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-light bg-ligth">
   <div class="container-fluid justify-content-start">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/home/">
       <img src="{% static 'imagens/logo.jpg' %}" alt="" class="small-logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -82,6 +82,23 @@
             <li><a class="dropdown-item" href="#">Pedidos em atraso</a></li>
             <li><a class="dropdown-item" href="#">Controle de cancelamento</a></li>
             <li><a class="dropdown-item" href="#">Solicitações loja</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="{% static 'imagens/icon.ico' %}" alt="" class="user-icon">
+            {{ request.user.get_full_name }}o
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Configurações</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/">Logout</a></li>
           </ul>
         </li>
       </ul>

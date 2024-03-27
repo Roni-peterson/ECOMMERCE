@@ -116,6 +116,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Configurações de autenticação
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Backend de autenticação padrão
+]
+
+LOGIN_REDIRECT_URL = '/'  # Página para redirecionar após o login bem-sucedido
+LOGOUT_REDIRECT_URL = '/'  # Página para redirecionar após o logout
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

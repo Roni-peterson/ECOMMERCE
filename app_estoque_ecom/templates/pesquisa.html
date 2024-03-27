@@ -2,7 +2,7 @@
 <div class="container mt-5">
   <div class="row justify-content-start">
     <div class="col-lg-3"> <!-- Define a largura máxima do formulário -->
-      <form class="d-flex" onsubmit="enviarPesquisa(event)">
+      <form class="d-flex" onsubmit="filtrarProdutos(event)">
         <input id="codigo" class="form-control me-2" type="search" placeholder="Insira o código" aria-label="Search">
         <button class="btn btn-outline-primary" type="submit" name="btn-procurar">Procurar</button>
       </form>
@@ -10,15 +10,95 @@
   </div>
 </div>
 
+<div class="container mt-5">
+    <h2>Lista de Produtos</h2>
+    <table id="tabelaProdutos" class="table">
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Ean</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Linha</th>
+                <th scope="col">Data Validade</th>
+                <th scope="col">Lote</th>
+                <th scope="col">Custo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cadastro_produtos in produto %}
+            <tr>
+                <td>{{ cadastro_produtos.cod_produto }}</td>
+                <td>{{ cadastro_produtos.ean_produto }}</td>
+                <td>{{ cadastro_produtos.desc_produto }}</td>
+                <td>{{ cadastro_produtos.linha_produto }}</td>
+                <td>{{ cadastro_produtos.dt_val_produto }}</td>
+                <td>{{ cadastro_produtos.lt_produto }}</td>
+                <td>{{ cadastro_produtos.custo_produto }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
 <script>
-  function enviarPesquisa(event) {
-    // Impede o envio padrão do formulário
+  var timeoutId;
+
+  function startTimer() {
+    // Defina um temporizador para redefinir a tabela após 30 segundos
+    timeoutId = setTimeout(function() {
+      resetTable();
+    }, 30000); // 30 segundos em milissegundos
+  }
+
+  function resetTimer() {
+    // Reinicie o temporizador sempre que houver uma interação do usuário
+    clearTimeout(timeoutId);
+    startTimer();
+  }
+
+  function resetTable() {
+    // Função para redefinir a tabela para listar todos os produtos
+    var tabela = document.getElementById("tabelaProdutos");
+    var linhas = tabela.getElementsByTagName("tr");
+    for (var i = 0; i < linhas.length; i++) {
+      linhas[i].style.display = "";
+    }
+
+    // Limpar o campo de pesquisa
+    document.getElementById("codigo").value = "";
+  }
+
+  function filtrarProdutos(event) {
     event.preventDefault();
 
-    // Obtém o valor do campo de entrada
-    var codigo = document.getElementById("codigo").value;
+    var codigo = document.getElementById("codigo").value.toLowerCase();
+    var tabela = document.getElementById("tabelaProdutos");
+    var linhas = tabela.getElementsByTagName("tr");
 
-    // Redireciona para a rota desejada com o código como parâmetro de consulta
-    window.location.href = "{% url 'cadastro_produtos' %}" + encodeURIComponent(codigo);
+    for (var i = 0; i < linhas.length; i++) {
+      var colunaCodigo = linhas[i].getElementsByTagName("td")[0];
+      if (colunaCodigo) {
+        var textoCodigo = colunaCodigo.textContent || colunaCodigo.innerText;
+        if (textoCodigo.toLowerCase().includes(codigo) || codigo === "") {
+          linhas[i].style.display = "";
+        } else {
+          linhas[i].style.display = "none";
+        }
+      }
+    }
+
+    resetTimer(); // Reinicie o temporizador após cada filtragem
   }
+
+  // Iniciar o temporizador quando a página carregar
+  window.onload = function() {
+    startTimer();
+  };
+
+  // Adicionar detecção de eventos para redefinir o temporizador
+  document.addEventListener("mousemove", resetTimer);
+  document.addEventListener("keypress", resetTimer);
 </script>
+
+
+

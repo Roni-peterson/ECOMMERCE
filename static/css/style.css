@@ -117,10 +117,41 @@ thead {
     text-align: left;
     /* Alinhamento do texto */
 }
+
 body {
+    background-color: #f8f9fa;
+}
 
-    background-color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form input {
+    width: 80%; /* Ajusta a largura do input */
+    max-width: 300px; /* Define a largura máxima */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block; /* Faz com que os inputs fiquem em linhas separadas */
+    margin: 0 auto; /* Centraliza os inputs horizontalmente */
 }
